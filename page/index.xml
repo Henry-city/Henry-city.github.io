@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Pages on Pygargous</title>
-        <link>https://Henry-city.github.io/page/</link>
+        <link>//localhost:1313/page/</link>
         <description>Recent content in Pages on Pygargous</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Mon, 30 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://Henry-city.github.io/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 30 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/page/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>About</title>
-        <link>https://Henry-city.github.io/about/</link>
+        <link>//localhost:1313/about/</link>
         <pubDate>Mon, 30 Sep 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://Henry-city.github.io/about/</guid>
+        <guid>//localhost:1313/about/</guid>
         <description>&lt;p&gt;I&amp;rsquo;m currently a bachelor student majoring in electronic and information engineering of advanced manufacturing college of Fuzhou University. My research topics are embedded and AI. In spare time, I like playing piano and reading.&lt;/p&gt;
 &lt;p&gt;At the third year of the junior high school, I received the guidance of &lt;a class=&#34;link&#34; href=&#34;https://faculty.uestc.edu.cn/zhengyonghao/zh_CN/index.htm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Prof. Yonghao Zheng&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;https://sose.uestc.edu.cn/info/1032/6984.htm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -22,26 +22,26 @@
         </item>
         <item>
         <title>Archives</title>
-        <link>https://Henry-city.github.io/archives/</link>
+        <link>//localhost:1313/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://Henry-city.github.io/archives/</guid>
+        <guid>//localhost:1313/archives/</guid>
         <description></description>
         </item>
         <item>
         <title>Links</title>
-        <link>https://Henry-city.github.io/links/</link>
+        <link>//localhost:1313/links/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://Henry-city.github.io/links/</guid>
+        <guid>//localhost:1313/links/</guid>
         <description></description>
         </item>
         <item>
         <title>Search</title>
-        <link>https://Henry-city.github.io/search/</link>
+        <link>//localhost:1313/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://Henry-city.github.io/search/</guid>
+        <guid>//localhost:1313/search/</guid>
         <description></description>
         </item>
         

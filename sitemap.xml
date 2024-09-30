@@ -2,49 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://Henry-city.github.io/</loc>
+    <loc>//localhost:1313/</loc>
     <lastmod>2024-09-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://Henry-city.github.io/about/</loc>
+    <loc>//localhost:1313/about/</loc>
     <lastmod>2024-09-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://Henry-city.github.io/categories/</loc>
+    <loc>//localhost:1313/categories/</loc>
     <lastmod>2024-09-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://Henry-city.github.io/p/chopin-etudes-op.10-no.5/</loc>
+    <loc>//localhost:1313/p/chopin-etudes-op.10-no.5/</loc>
     <lastmod>2024-09-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://Henry-city.github.io/tags/embedded/</loc>
+    <loc>//localhost:1313/tags/embedded/</loc>
     <lastmod>2024-09-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://Henry-city.github.io/categories/music/</loc>
+    <loc>//localhost:1313/categories/music/</loc>
     <lastmod>2024-09-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://Henry-city.github.io/page/</loc>
+    <loc>//localhost:1313/page/</loc>
     <lastmod>2024-09-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://Henry-city.github.io/tags/piano/</loc>
+    <loc>//localhost:1313/tags/piano/</loc>
     <lastmod>2024-09-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://Henry-city.github.io/post/</loc>
+    <loc>//localhost:1313/post/</loc>
     <lastmod>2024-09-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://Henry-city.github.io/categories/project/</loc>
+    <loc>//localhost:1313/categories/project/</loc>
     <lastmod>2024-09-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://Henry-city.github.io/p/smart-car-based-on-tim0g3507/</loc>
+    <loc>//localhost:1313/p/smart-car-based-on-tim0g3507/</loc>
     <lastmod>2024-09-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://Henry-city.github.io/tags/</loc>
+    <loc>//localhost:1313/tags/</loc>
     <lastmod>2024-09-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://Henry-city.github.io/archives/</loc>
+    <loc>//localhost:1313/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://Henry-city.github.io/categories/learning/</loc>
+    <loc>//localhost:1313/categories/learning/</loc>
   </url><url>
-    <loc>https://Henry-city.github.io/links/</loc>
+    <loc>//localhost:1313/links/</loc>
   </url><url>
-    <loc>https://Henry-city.github.io/search/</loc>
+    <loc>//localhost:1313/search/</loc>
   </url>
 </urlset>

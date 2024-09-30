@@ -2,34 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Categories on Pygargous</title>
-        <link>https://Henry-city.github.io/categories/</link>
+        <link>//localhost:1313/categories/</link>
         <description>Recent content in Categories on Pygargous</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Mon, 30 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://Henry-city.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 30 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Music</title>
-        <link>https://Henry-city.github.io/categories/music/</link>
+        <link>//localhost:1313/categories/music/</link>
         <pubDate>Mon, 30 Sep 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://Henry-city.github.io/categories/music/</guid>
-        <description>&lt;img src="https://Henry-city.github.io/categories/music/Music.png" alt="Featured image of post Music" /&gt;</description>
+        <guid>//localhost:1313/categories/music/</guid>
+        <description>&lt;img src="//localhost:1313/categories/music/Music.png" alt="Featured image of post Music" /&gt;</description>
         </item>
         <item>
         <title>Project</title>
-        <link>https://Henry-city.github.io/categories/project/</link>
+        <link>//localhost:1313/categories/project/</link>
         <pubDate>Mon, 30 Sep 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://Henry-city.github.io/categories/project/</guid>
-        <description>&lt;img src="https://Henry-city.github.io/categories/project/project.jpg" alt="Featured image of post Project" /&gt;</description>
+        <guid>//localhost:1313/categories/project/</guid>
+        <description>&lt;img src="//localhost:1313/categories/project/project.jpg" alt="Featured image of post Project" /&gt;</description>
         </item>
         <item>
         <title>Learning</title>
-        <link>https://Henry-city.github.io/categories/learning/</link>
+        <link>//localhost:1313/categories/learning/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://Henry-city.github.io/categories/learning/</guid>
-        <description>&lt;img src="https://Henry-city.github.io/categories/learning/learning.jpg" alt="Featured image of post Learning" /&gt;</description>
+        <guid>//localhost:1313/categories/learning/</guid>
+        <description>&lt;img src="//localhost:1313/categories/learning/learning.jpg" alt="Featured image of post Learning" /&gt;</description>
         </item>
         
     </channel>
