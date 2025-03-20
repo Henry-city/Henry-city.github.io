@@ -1,1 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Learning on Pygargous</title><link>https://Henry-city.github.io/categories/learning/</link><description>Recent content in Learning on Pygargous</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>Example Person</copyright><atom:link href="https://Henry-city.github.io/categories/learning/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Learning on Pygargous</title><link>https://Henry-city.github.io/categories/learning/</link><description>Recent content in Learning on Pygargous</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>Example Person</copyright><lastBuildDate>Thu, 20 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://Henry-city.github.io/categories/learning/index.xml" rel="self" type="application/rss+xml"/><item><title>A good open-source PDF-to-Markdown conversion model</title><link>https://Henry-city.github.io/p/a-good-open-source-pdf-to-markdown-conversion-model/</link><pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate><guid>https://Henry-city.github.io/p/a-good-open-source-pdf-to-markdown-conversion-model/</guid><description>&lt;img src="https://Henry-city.github.io/p/a-good-open-source-pdf-to-markdown-conversion-model/1.png" alt="Featured image of post A good open-source PDF-to-Markdown conversion model" />&lt;p>I&amp;rsquo;ve found a good open-source PDF-to-Markdown conversion model—MinerU. It has gained over 28.7k stars on GitHub and can easily convert documents, including Word, PDF, and PPT, to Markdown. It also processes LaTeX, tables, and images with high accuracy. You can deploy it on your PC via Conda, use its GUI software, or even access it through a website.&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/opendatalab/MinerU" target="_blank" rel="noopener"
+>Click here to get the repositories&lt;/a>&lt;/p>
+&lt;p>&lt;img src="https://Henry-city.github.io/p/a-good-open-source-pdf-to-markdown-conversion-model/2.png"
+width="2240"
+height="1418"
+srcset="https://Henry-city.github.io/p/a-good-open-source-pdf-to-markdown-conversion-model/2_hu_317efd08e2ed9c81.png 480w, https://Henry-city.github.io/p/a-good-open-source-pdf-to-markdown-conversion-model/2_hu_326acb629607562e.png 1024w"
+loading="lazy"
+alt="UI"
+class="gallery-image"
+data-flex-grow="157"
+data-flex-basis="379px"
+>
+&lt;img src="https://Henry-city.github.io/p/a-good-open-source-pdf-to-markdown-conversion-model/3.png"
+width="2555"
+height="1519"
+srcset="https://Henry-city.github.io/p/a-good-open-source-pdf-to-markdown-conversion-model/3_hu_89808b18a8e32699.png 480w, https://Henry-city.github.io/p/a-good-open-source-pdf-to-markdown-conversion-model/3_hu_9f9b6f082e56c06b.png 1024w"
+loading="lazy"
+alt="Result"
+class="gallery-image"
+data-flex-grow="168"
+data-flex-basis="403px"
+>&lt;/p></description></item></channel></rss>
