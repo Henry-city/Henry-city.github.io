@@ -1,4 +1,88 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Pygargous</title><link>https://Henry-city.github.io/post/</link><description>Recent content in Posts on Pygargous</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Example Person</copyright><lastBuildDate>Wed, 07 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://Henry-city.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Colmap-camera-visualizer</title><link>https://Henry-city.github.io/p/colmap-camera-visualizer/</link><pubDate>Wed, 07 Jan 2026 00:00:00 +0000</pubDate><guid>https://Henry-city.github.io/p/colmap-camera-visualizer/</guid><description>&lt;img src="https://Henry-city.github.io/p/colmap-camera-visualizer/1.png" alt="Featured image of post Colmap-camera-visualizer" /&gt;&lt;p&gt;&lt;strong&gt;COLMAP Camera Visualizer&lt;/strong&gt; Validating camera extrinsics and intrinsics from COLMAP can often be an opaque and challenging process. To address this, I developed a pipeline designed to bridge the gap between COLMAP and Blender. This tool converts COLMAP extrinsic data into standard World-to-Camera (w2c) and Camera-to-World (c2w) RT matrices, automatically generating cameras within Blender. This visualization not only makes it effortless to verify pose accuracy but also enables intuitive camera editing and inspection in a 3D space.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Pygargous</title><link>https://Henry-city.github.io/post/</link><description>Recent content in Posts on Pygargous</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Example Person</copyright><lastBuildDate>Wed, 07 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://Henry-city.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Blender Baking Workflow Guide</title><link>https://Henry-city.github.io/p/blender-baking-workflow-guide/</link><pubDate>Wed, 07 Jan 2026 00:00:00 +0000</pubDate><guid>https://Henry-city.github.io/p/blender-baking-workflow-guide/</guid><description>&lt;img src="https://Henry-city.github.io/p/blender-baking-workflow-guide/1.png" alt="Featured image of post Blender Baking Workflow Guide" /&gt;&lt;p&gt;I’ve organized and documented the Blender baking workflow.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Basic Knowledge：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Z + Up Arrow:&lt;/strong&gt; Render&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;G:&lt;/strong&gt; Move/Grab (drag to move). The camera can also be moved by dragging with this.&lt;/p&gt;
+&lt;p&gt;z+上 render&lt;/p&gt;
+&lt;p&gt;g拖动 相机也可以通过这个拖动&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Process：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;（1）Align（对齐）&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://Henry-city.github.io/p/blender-baking-workflow-guide/1.png"
+width="1765"
+height="973"
+srcset="https://Henry-city.github.io/p/blender-baking-workflow-guide/1_hu_cee177def4ce810a.png 480w, https://Henry-city.github.io/p/blender-baking-workflow-guide/1_hu_d7213ec632c10dd6.png 1024w"
+loading="lazy"
+alt="pic"
+class="gallery-image"
+data-flex-grow="181"
+data-flex-basis="435px"
+&gt;&lt;/p&gt;
+&lt;p&gt;（2）choose&amp;quot;cycle&amp;quot;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://Henry-city.github.io/p/blender-baking-workflow-guide/2.png"
+width="1460"
+height="1002"
+srcset="https://Henry-city.github.io/p/blender-baking-workflow-guide/2_hu_64cdef80870bbd7.png 480w, https://Henry-city.github.io/p/blender-baking-workflow-guide/2_hu_57e420835ef1e9ba.png 1024w"
+loading="lazy"
+alt="pic"
+class="gallery-image"
+data-flex-grow="145"
+data-flex-basis="349px"
+&gt;&lt;/p&gt;
+&lt;p&gt;（3）choose“shading”&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://Henry-city.github.io/p/blender-baking-workflow-guide/3.png"
+width="1219"
+height="1001"
+srcset="https://Henry-city.github.io/p/blender-baking-workflow-guide/3_hu_e9cb4e8cb6f2b13b.png 480w, https://Henry-city.github.io/p/blender-baking-workflow-guide/3_hu_b5aeed48bed21e11.png 1024w"
+loading="lazy"
+alt="pic"
+class="gallery-image"
+data-flex-grow="121"
+data-flex-basis="292px"
+&gt;&lt;/p&gt;
+&lt;p&gt;（4）In the bottom bar, press F3 (Search), then select “Image Texture.”&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://Henry-city.github.io/p/blender-baking-workflow-guide/4.png"
+width="1172"
+height="678"
+srcset="https://Henry-city.github.io/p/blender-baking-workflow-guide/4_hu_ba74ca0fe8f176eb.png 480w, https://Henry-city.github.io/p/blender-baking-workflow-guide/4_hu_dcbeb85f47dedf0d.png 1024w"
+loading="lazy"
+alt="pic"
+class="gallery-image"
+data-flex-grow="172"
+data-flex-basis="414px"
+&gt;&lt;/p&gt;
+&lt;p&gt;(5) Create a new material: click “New.”&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://Henry-city.github.io/p/blender-baking-workflow-guide/5.png"
+width="958"
+height="491"
+srcset="https://Henry-city.github.io/p/blender-baking-workflow-guide/5_hu_ad827f1ac97f4776.png 480w, https://Henry-city.github.io/p/blender-baking-workflow-guide/5_hu_235327ccea07b231.png 1024w"
+loading="lazy"
+alt="pic"
+class="gallery-image"
+data-flex-grow="195"
+data-flex-basis="468px"
+&gt;&lt;/p&gt;
+&lt;p&gt;(6) Adjust the Bake settings as needed. Set the Bake Type to “diffuse.”&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://Henry-city.github.io/p/blender-baking-workflow-guide/6.png"
+width="406"
+height="1004"
+srcset="https://Henry-city.github.io/p/blender-baking-workflow-guide/6_hu_175f5be9cdf38999.png 480w, https://Henry-city.github.io/p/blender-baking-workflow-guide/6_hu_338b965a92031b4e.png 1024w"
+loading="lazy"
+alt="pic"
+class="gallery-image"
+data-flex-grow="40"
+data-flex-basis="97px"
+&gt;&lt;/p&gt;
+&lt;p&gt;(7) Click “Output.” Select the source object to bake from, then hold Shift and select the target object to bake to.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://Henry-city.github.io/p/blender-baking-workflow-guide/7.png"
+width="736"
+height="745"
+srcset="https://Henry-city.github.io/p/blender-baking-workflow-guide/7_hu_e7c9832d2500d5c1.png 480w, https://Henry-city.github.io/p/blender-baking-workflow-guide/7_hu_3006ade5118f9b7.png 1024w"
+loading="lazy"
+alt="pic"
+class="gallery-image"
+data-flex-grow="98"
+data-flex-basis="237px"
+&gt;&lt;/p&gt;
+&lt;p&gt;(8) bake&lt;/p&gt;</description></item><item><title>Colmap-camera-visualizer</title><link>https://Henry-city.github.io/p/colmap-camera-visualizer/</link><pubDate>Wed, 07 Jan 2026 00:00:00 +0000</pubDate><guid>https://Henry-city.github.io/p/colmap-camera-visualizer/</guid><description>&lt;img src="https://Henry-city.github.io/p/colmap-camera-visualizer/1.png" alt="Featured image of post Colmap-camera-visualizer" /&gt;&lt;p&gt;&lt;strong&gt;COLMAP Camera Visualizer&lt;/strong&gt; Validating camera extrinsics and intrinsics from COLMAP can often be an opaque and challenging process. To address this, I developed a pipeline designed to bridge the gap between COLMAP and Blender. This tool converts COLMAP extrinsic data into standard World-to-Camera (w2c) and Camera-to-World (c2w) RT matrices, automatically generating cameras within Blender. This visualization not only makes it effortless to verify pose accuracy but also enables intuitive camera editing and inspection in a 3D space.&lt;/p&gt;
 &lt;p&gt;&lt;a class="link" href="https://github.com/Henry-city/colmap-camera-visualizer" target="_blank" rel="noopener"
 &gt;Click here to get the repositories（https://github.com/Henry-city/colmap-camera-visualizer）&lt;/a&gt;&lt;/p&gt;</description></item><item><title>A useful Markdown formatting tool (suitable for WeChat Official Accounts)</title><link>https://Henry-city.github.io/p/a-useful-markdown-formatting-tool-suitable-for-wechat-official-accounts/</link><pubDate>Wed, 26 Mar 2025 00:00:00 +0000</pubDate><guid>https://Henry-city.github.io/p/a-useful-markdown-formatting-tool-suitable-for-wechat-official-accounts/</guid><description>&lt;img src="https://Henry-city.github.io/p/a-useful-markdown-formatting-tool-suitable-for-wechat-official-accounts/1.png" alt="Featured image of post A useful Markdown formatting tool (suitable for WeChat Official Accounts)" /&gt;&lt;p&gt;I’ve found a great Markdown formatting tool that works perfectly for articles on WeChat Official Accounts, Zhihu, and other social media platforms. You simply write your article in Markdown, paste it into the site, and it offers a variety of formatting options to choose from.&lt;/p&gt;
 &lt;p&gt;&lt;a class="link" href="https://markdown.com.cn/editor" target="_blank" rel="noopener"
