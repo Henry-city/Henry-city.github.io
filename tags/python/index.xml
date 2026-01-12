@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Python on Pygargous</title><link>https://Henry-city.github.io/tags/python/</link><description>Recent content in Python on Pygargous</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Example Person</copyright><lastBuildDate>Mon, 12 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://Henry-city.github.io/tags/python/index.xml" rel="self" type="application/rss+xml"/><item><title>Intelligent Homework Manager &amp; AI Grader</title><link>https://Henry-city.github.io/p/intelligent-homework-manager-ai-grader/</link><pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate><guid>https://Henry-city.github.io/p/intelligent-homework-manager-ai-grader/</guid><description>&lt;img src="https://Henry-city.github.io/p/intelligent-homework-manager-ai-grader/1.png" alt="Featured image of post Intelligent Homework Manager &amp; AI Grader" /&gt;&lt;p&gt;Developed as a practical project for my Python course, this is a powerful online homework management system designed to streamline the grading process. Built with Streamlit, it automates administrative tasks and leverages Large Language Models (LLMs) for intelligent assessment.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://Henry-city.github.io/p/intelligent-homework-manager-ai-grader/2.png"
-width="2560"
-height="1516"
-srcset="https://Henry-city.github.io/p/intelligent-homework-manager-ai-grader/2_hu_cff1d5e990765cd6.png 480w, https://Henry-city.github.io/p/intelligent-homework-manager-ai-grader/2_hu_269fdd77c7fd68de.png 1024w"
-loading="lazy"
-alt="LLM"
-class="gallery-image"
-data-flex-grow="168"
-data-flex-basis="405px"
-&gt;&lt;/p&gt;
+&lt;img src="2.png" alt="LLM" style="width: 65%;" /&gt;
 &lt;p&gt;&lt;strong&gt;Key Features:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Automated Verification:&lt;/strong&gt; Instantly compares uploaded files against a student roster to identify missing submissions.&lt;/li&gt;
