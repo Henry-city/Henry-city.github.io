@@ -14,8 +14,8 @@
   <link rel="icon" href="./assets/updating/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="./assets/updating/space-grotesk-600.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="./assets/updating/instrument-serif-italic.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="./assets/updating/style.css?v=cover-story-1">
-  <script src="./assets/updating/scene.js?v=cover-story-1" defer></script>
+  <link rel="stylesheet" href="./assets/updating/style.css?v=cover-story-2">
+  <script src="./assets/updating/scene.js?v=cover-story-2" defer></script>
 </head>
 <body>
   <div class="scene" aria-hidden="true">
@@ -73,13 +73,14 @@
     <h2 class="sr-only" id="cover-viewer-title">Cover stories</h2>
     <div class="cover-gallery" aria-label="Cover photographs" tabindex="-1"></div>
     <div class="cover-caption-shade" aria-hidden="true"></div>
-    <button class="cover-close" type="button" aria-label="Close cover story" autofocus><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="1.2"/></svg></button>
+    <button class="cover-back" type="button" aria-label="Back to website" autofocus><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m10 6-6 6 6 6M4 12h16" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>BACK</span></button>
+    <button class="cover-close" type="button" aria-label="Close cover story"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="1.2"/></svg></button>
     <button class="cover-prev cover-arrow" type="button" aria-label="Previous cover" hidden><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m14 5-7 7 7 7" stroke="currentColor" stroke-width="1.2"/></svg></button>
     <button class="cover-next cover-arrow" type="button" aria-label="Next cover" hidden><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m10 5 7 7-7 7" stroke="currentColor" stroke-width="1.2"/></svg></button>
     <div class="cover-caption" aria-live="polite" aria-atomic="true">
       <p class="cover-meta"><span class="cover-dates"></span><i aria-hidden="true"></i><span class="cover-number"></span></p>
       <p class="cover-description"></p>
-      <a class="cover-source" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
+      <p class="cover-location"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.3"/></svg><span class="cover-location-label"></span></p>
     </div>
   </dialog>
   <script id="cover-data" type="application/json">
@@ -92,6 +93,7 @@
       "startedAt": "2026-11-02",
       "endedAt": null,
       "photographedAt": "2025-06",
+      "location": { "country": "Japan", "city": "Fujikawaguchiko" },
       "description": "Photographed in June 2025 on a boat trip across Lake Kawaguchi, with Mount Fuji in view.",
       "source": { "name": "shuki.sbs", "url": "https://shuki.sbs/login" }
     }

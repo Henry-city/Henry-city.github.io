@@ -109,12 +109,14 @@
     const dialog = document.querySelector('#cover-viewer');
     const gallery = dialog.querySelector('.cover-gallery');
     const close = dialog.querySelector('.cover-close');
+    const back = dialog.querySelector('.cover-back');
     const previous = dialog.querySelector('.cover-prev');
     const next = dialog.querySelector('.cover-next');
     const dates = dialog.querySelector('.cover-dates');
     const number = dialog.querySelector('.cover-number');
     const description = dialog.querySelector('.cover-description');
-    const source = dialog.querySelector('.cover-source');
+    const location = dialog.querySelector('.cover-location');
+    const locationLabel = dialog.querySelector('.cover-location-label');
     let covers;
     try { covers = JSON.parse(document.querySelector('#cover-data').textContent); } catch (_) { return; }
     if (!Array.isArray(covers) || !covers.length || typeof dialog.showModal !== 'function') return;
@@ -145,11 +147,9 @@
       dates.textContent = `${formatDate(cover.startedAt)} — ${formatDate(cover.endedAt)}`;
       number.textContent = `COVER ${cover.id}`;
       description.textContent = cover.description;
-      source.hidden = !cover.source?.url;
-      if (cover.source?.url) {
-        source.href = cover.source.url;
-        source.setAttribute('aria-label', `Image source: ${cover.source.name} (opens in a new tab)`);
-      }
+      const place = [cover.location?.country, cover.location?.city].filter(Boolean).join(' · ');
+      location.hidden = !place;
+      locationLabel.textContent = place;
       if ((index === 0 && document.activeElement === previous) || (index === covers.length - 1 && document.activeElement === next)) {
         gallery.focus({ preventScroll: true });
       }
@@ -213,7 +213,7 @@
       document.body.classList.add('cover-open');
       trigger.setAttribute('aria-expanded', 'true');
       slideTo(0, 'instant');
-      close.focus({ preventScroll: true });
+      back.focus({ preventScroll: true });
       requestAnimationFrame(() => requestAnimationFrame(() => { if (storyOpen && !closing) dialog.classList.add('is-visible'); }));
     }
     function closeStory() {
@@ -233,6 +233,7 @@
       }, reducedMotion.matches ? 0 : 560);
     }
     close.addEventListener('click', closeStory);
+    back.addEventListener('click', closeStory);
     dialog.addEventListener('cancel', event => { event.preventDefault(); closeStory(); });
     trigger.addEventListener('click', openStory);
     showCaption(0);
