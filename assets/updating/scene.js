@@ -11,13 +11,15 @@
   const pageLinks = [...document.querySelectorAll('.chapter-nav a')];
   const primaryLinks = [...document.querySelectorAll('.primary-nav a')];
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  const mobileLayout = matchMedia('(max-width: 700px), (hover: none) and (pointer: coarse)');
+  const nativePages = () => reducedMotion.matches || mobileLayout.matches;
   const clamp = value => Math.max(0, Math.min(1, value));
   const smooth = value => { const x = clamp(value); return x * x * (3 - 2 * x); };
   let frame = 0, currentChapter = -1, cancelPendingFocus = null, storyOpen = false;
   document.querySelector('#year').textContent = new Date().getFullYear();
 
   function sectionTop(index) {
-    return reducedMotion.matches ? sections[index].offsetTop : index * (journey.offsetHeight - viewport.offsetHeight) / (sections.length - 1);
+    return nativePages() ? sections[index].offsetTop : index * (journey.offsetHeight - viewport.offsetHeight) / (sections.length - 1);
   }
 
   function updateNavigation(chapter) {
@@ -32,21 +34,21 @@
     const next = last ? 0 : chapter + 1;
     cue.href = `#${sectionIds[next]}`;
     cue.classList.toggle('is-back', last);
-    cueLabel.textContent = last ? 'BACK TO TOP' : chapter === 0 ? 'SCROLL TO EXPLORE' : 'SCROLL TO CONTINUE';
+    cueLabel.textContent = last ? 'BACK TO TOP' : mobileLayout.matches ? (chapter === 0 ? 'SWIPE TO EXPLORE' : 'NEXT SECTION') : chapter === 0 ? 'SCROLL TO EXPLORE' : 'SCROLL TO CONTINUE';
     cue.setAttribute('aria-label', last ? 'Back to pygargous' : `Scroll to ${['Home', 'Projects', 'Research', 'CV'][next]}`);
   }
 
   function render() {
     frame = 0;
     if (storyOpen) return;
-    const span = Math.max(1, reducedMotion.matches ? sections.at(-1).offsetTop : journey.offsetHeight - viewport.offsetHeight);
+    const span = Math.max(1, nativePages() ? sections.at(-1).offsetTop : journey.offsetHeight - viewport.offsetHeight);
     const progress = clamp(scrollY / span);
     const position = progress * (sections.length - 1);
     const chapter = Math.round(position);
     root.style.setProperty('--progress', progress.toFixed(4));
     updateNavigation(chapter);
     sections.forEach((section, index) => {
-      if (reducedMotion.matches) {
+      if (nativePages()) {
         section.removeAttribute('aria-hidden');
         section.inert = false;
         return;
@@ -65,7 +67,9 @@
   function schedule() { if (!frame) frame = requestAnimationFrame(render); }
   function setMotion() {
     const chapter = Math.max(0, currentChapter);
-    root.classList.toggle('enhanced', !reducedMotion.matches);
+    root.classList.toggle('mobile-layout', mobileLayout.matches);
+    root.classList.toggle('enhanced', !nativePages());
+    currentChapter = -1;
     if (!storyOpen) scrollTo({ top: sectionTop(chapter), behavior: 'instant' });
     render();
   }
@@ -120,7 +124,7 @@
     let covers;
     try { covers = JSON.parse(document.querySelector('#cover-data').textContent); } catch (_) { return; }
     if (!Array.isArray(covers) || !covers.length || typeof dialog.showModal !== 'function') return;
-    let activeCover = -1, savedScroll = 0, savedFocus = null, closing = false, galleryFrame = 0, drag = null;
+    let activeCover = -1, savedScroll = 0, savedChapter = 0, savedFocus = null, closing = false, galleryFrame = 0, drag = null;
     const formatDate = date => date ? date.replaceAll('-', '.') : 'PRESENT';
     covers.forEach((cover, index) => {
       const figure = document.createElement('figure');
@@ -147,7 +151,7 @@
       dates.textContent = `${formatDate(cover.startedAt)} — ${formatDate(cover.endedAt)}`;
       number.textContent = `COVER ${cover.id}`;
       description.textContent = cover.description;
-      const place = [cover.location?.country, cover.location?.city].filter(Boolean).join(' · ');
+      const place = [cover.location?.country, cover.location?.region || cover.location?.city].filter(Boolean).join(' · ');
       location.hidden = !place;
       locationLabel.textContent = place;
       if ((index === 0 && document.activeElement === previous) || (index === covers.length - 1 && document.activeElement === next)) {
@@ -204,13 +208,15 @@
       if (storyOpen) return;
       if (cancelPendingFocus) cancelPendingFocus();
       savedScroll = scrollY;
+      savedChapter = Math.max(0, currentChapter);
       savedFocus = document.activeElement;
       scrollTo({ top: savedScroll, behavior: 'instant' });
       storyOpen = true;
       closing = false;
       dialog.showModal();
-      root.classList.add('cover-open');
-      document.body.classList.add('cover-open');
+      document.body.style.setProperty('--locked-scroll-y', `${-savedScroll}px`);
+      root.classList.add('cover-open', 'cover-locked');
+      document.body.classList.add('cover-locked');
       trigger.setAttribute('aria-expanded', 'true');
       slideTo(0, 'instant');
       back.focus({ preventScroll: true });
@@ -221,13 +227,15 @@
       closing = true;
       dialog.classList.remove('is-visible');
       root.classList.remove('cover-open');
-      document.body.classList.remove('cover-open');
       setTimeout(() => {
         dialog.close();
+        root.classList.remove('cover-locked');
+        document.body.classList.remove('cover-locked');
+        document.body.style.removeProperty('--locked-scroll-y');
         storyOpen = false;
         closing = false;
         trigger.setAttribute('aria-expanded', 'false');
-        scrollTo({ top: savedScroll, behavior: 'instant' });
+        scrollTo({ top: mobileLayout.matches ? sectionTop(savedChapter) : savedScroll, behavior: 'instant' });
         render();
         (savedFocus?.isConnected ? savedFocus : trigger).focus({ preventScroll: true });
       }, reducedMotion.matches ? 0 : 560);
@@ -245,6 +253,7 @@
   addEventListener('hashchange', navigateToHash);
   addEventListener('pageshow', schedule);
   reducedMotion.addEventListener('change', setMotion);
+  mobileLayout.addEventListener('change', setMotion);
   setMotion();
   initCoverStories();
   requestAnimationFrame(navigateToHash);
