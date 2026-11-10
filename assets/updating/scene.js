@@ -12,7 +12,8 @@
   const primaryLinks = [...document.querySelectorAll('.primary-nav a')];
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const mobileLayout = matchMedia('(max-width: 700px), (hover: none) and (pointer: coarse)');
-  const nativePages = () => reducedMotion.matches || mobileLayout.matches;
+  const compactHeight = matchMedia('(max-height: 760px)');
+  const nativePages = () => reducedMotion.matches || mobileLayout.matches || compactHeight.matches;
   const clamp = value => Math.max(0, Math.min(1, value));
   const smooth = value => { const x = clamp(value); return x * x * (3 - 2 * x); };
   let frame = 0, currentChapter = -1, cancelPendingFocus = null, storyOpen = false;
@@ -25,6 +26,7 @@
   function updateNavigation(chapter) {
     if (chapter === currentChapter) return;
     currentChapter = chapter;
+    root.classList.toggle('research-active', sectionIds[chapter] === 'research');
     pageNumber.textContent = String(chapter + 1).padStart(2, '0');
     [...pageLinks, ...primaryLinks].forEach(link => {
       if (link.getAttribute('href') === `#${sectionIds[chapter]}`) link.setAttribute('aria-current', 'page');
@@ -44,7 +46,10 @@
     const span = Math.max(1, nativePages() ? sections.at(-1).offsetTop : journey.offsetHeight - viewport.offsetHeight);
     const progress = clamp(scrollY / span);
     const position = progress * (sections.length - 1);
-    const chapter = Math.round(position);
+    // Content-rich sections can be taller than the screen in native layouts.
+    const chapter = nativePages()
+      ? sections.reduce((active, section, index) => section.offsetTop <= scrollY + innerHeight * .4 ? index : active, 0)
+      : Math.round(position);
     root.style.setProperty('--progress', progress.toFixed(4));
     updateNavigation(chapter);
     sections.forEach((section, index) => {
@@ -249,11 +254,19 @@
   }
 
   addEventListener('scroll', schedule, { passive: true });
-  addEventListener('resize', schedule, { passive: true });
+  addEventListener('resize', () => {
+    if (root.classList.contains('enhanced') === nativePages()) {
+      setMotion();
+      return;
+    }
+    if (!storyOpen && !nativePages()) scrollTo({ top: sectionTop(Math.max(0, currentChapter)), behavior: 'instant' });
+    schedule();
+  }, { passive: true });
   addEventListener('hashchange', navigateToHash);
   addEventListener('pageshow', schedule);
   reducedMotion.addEventListener('change', setMotion);
   mobileLayout.addEventListener('change', setMotion);
+  compactHeight.addEventListener('change', setMotion);
   setMotion();
   initCoverStories();
   requestAnimationFrame(navigateToHash);

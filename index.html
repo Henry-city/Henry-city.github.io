@@ -14,8 +14,9 @@
   <link rel="icon" href="./assets/updating/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="./assets/updating/space-grotesk-600.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="./assets/updating/instrument-serif-italic.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="./assets/updating/style.css?v=mobile-4">
-  <script src="./assets/updating/scene.js?v=mobile-3" defer></script>
+  <link rel="stylesheet" href="./assets/updating/style.css?v=research-1">
+  <link rel="stylesheet" href="./assets/research/research.css?v=1">
+  <script src="./assets/updating/scene.js?v=research-1" defer></script>
 </head>
 <body>
   <div class="scene" aria-hidden="true">
@@ -43,8 +44,37 @@
       <section class="page-section placeholder" data-section="projects" id="projects" aria-labelledby="projects-title">
         <div class="section-content"><p class="section-label">01 / PROJECTS</p><h2 id="projects-title" tabindex="-1"><span class="sr-only">Projects — </span>updating.</h2></div>
       </section>
-      <section class="page-section placeholder" data-section="research" id="research" aria-labelledby="research-title">
-        <div class="section-content"><p class="section-label">02 / RESEARCH</p><h2 id="research-title" tabindex="-1"><span class="sr-only">Research — </span>updating.</h2></div>
+      <section class="page-section research" data-section="research" id="research" aria-labelledby="research-title">
+        <div class="research-content">
+          <header class="research-heading">
+            <div><p class="section-label">02 / RESEARCH</p><h2 id="research-title" tabindex="-1">Selected work.</h2></div>
+            <span class="research-index">01 / PUBLICATION</span>
+          </header>
+          <article class="publication" aria-labelledby="gaussolve-title">
+            <div class="publication-info">
+              <div class="publication-details">
+                <p class="publication-venue"><span>WACV 2027</span><span class="publication-topic">NEURAL RENDERING</span></p>
+                <h3 id="gaussolve-title"><a href="https://ooosn.github.io/gaussians-can-subtract/" target="_blank" rel="noopener noreferrer">Gaussians Can <em>Subtract</em><span class="publication-subtitle">Neural Dissolve Fields for Hybrid Scene Rendering</span></a></h3>
+                <p class="publication-authors">Yiyan Wang<sup>*</sup>, <strong>Haohan Liu<sup>*</sup></strong>, Tetsuo Shibuya</p>
+                <p class="publication-contribution">* Equal contribution</p>
+              </div>
+              <div class="publication-overview">
+                <p class="publication-summary">A view-dependent dissolve field removes inconsistent mesh content, letting residual Gaussians refill the scene with greater fidelity and fewer primitives.</p>
+                <nav class="publication-links" aria-label="Gaussolve resources">
+                  <a href="https://ooosn.github.io/gaussians-can-subtract/" target="_blank" rel="noopener noreferrer">Project <span aria-hidden="true">↗</span></a>
+                  <a href="https://github.com/Ooosn/gaussians-can-subtract" target="_blank" rel="noopener noreferrer">Code <span aria-hidden="true">↗</span></a>
+                  <a href="https://ooosn.github.io/gaussians-can-subtract/assets/paper.pdf" target="_blank" rel="noopener noreferrer">Paper <span class="resource-format">PDF</span><span aria-hidden="true">↗</span></a>
+                </nav>
+              </div>
+            </div>
+            <figure class="publication-figure">
+              <a href="https://ooosn.github.io/gaussians-can-subtract/" target="_blank" rel="noopener noreferrer" aria-label="Explore the Gaussolve project and interactive comparisons">
+                <img src="./assets/research/gaussolve-teaser.webp" width="2400" height="804" alt="Gaussolve overview: ground truth, textured mesh, dissolve field, residual Gaussians, and fused rendering, alongside a quality versus Gaussian-count comparison." loading="lazy" decoding="async">
+              </a>
+              <figcaption><span>GAUSSOLVE</span><span>Subtract what conflicts. Refill what is revealed.</span></figcaption>
+            </figure>
+          </article>
+        </div>
       </section>
       <section class="page-section placeholder" data-section="cv" id="cv" aria-labelledby="cv-title">
         <div class="section-content"><p class="section-label">03 / CV</p><h2 id="cv-title" tabindex="-1"><span class="sr-only">CV — </span>updating.</h2></div>
