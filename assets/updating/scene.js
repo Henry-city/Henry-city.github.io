@@ -37,7 +37,7 @@
     cue.href = `#${sectionIds[next]}`;
     cue.classList.toggle('is-back', last);
     cueLabel.textContent = last ? 'BACK TO TOP' : mobileLayout.matches ? (chapter === 0 ? 'SWIPE TO EXPLORE' : 'NEXT SECTION') : chapter === 0 ? 'SCROLL TO EXPLORE' : 'SCROLL TO CONTINUE';
-    cue.setAttribute('aria-label', last ? 'Back to pygargous' : `Scroll to ${['Home', 'Projects', 'Research', 'CV'][next]}`);
+    cue.setAttribute('aria-label', last ? 'Back to pygargous' : `Scroll to ${['Home', 'Research', 'CV'][next]}`);
   }
 
   function render() {
@@ -107,7 +107,7 @@
     });
   });
   function navigateToHash() {
-    const id = location.hash === '#updating' ? 'projects' : location.hash.slice(1);
+    const id = ['#updating', '#projects'].includes(location.hash) ? 'research' : location.hash.slice(1);
     const index = sectionIds.indexOf(id);
     if (index >= 0) goTo(index, 'instant');
     else schedule();

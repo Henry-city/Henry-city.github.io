@@ -1,6 +1,6 @@
 @font-face{font-family:Space Grotesk;src:url('./space-grotesk-600.ttf') format('truetype');font-style:normal;font-weight:600;font-display:swap}
 @font-face{font-family:Instrument Serif;src:url('./instrument-serif-italic.ttf') format('truetype');font-style:italic;font-weight:400;font-display:swap}
-:root{color-scheme:dark;--progress:0;--section-count:4}
+:root{color-scheme:dark;--progress:0;--section-count:3}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scrollbar-width:none}
 html::-webkit-scrollbar{display:none}
@@ -47,7 +47,7 @@ h2{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:40
 .scroll-cue{position:absolute;left:50%;bottom:-8px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:12px;min-width:140px;padding:12px 16px;font-size:8px;letter-spacing:2px;white-space:nowrap;color:#d1deef;transition:color .2s}
 .scroll-cue:hover{color:#fff}.scroll-line{position:relative;display:block;height:32px;width:1px;background:#d1e4fd30;overflow:hidden}.scroll-line i{position:absolute;inset:0;background:linear-gradient(transparent,#d8edff,transparent);animation:scroll-line 2.8s ease-in-out infinite}.scroll-cue svg{width:16px;height:16px;margin-top:-5px;transition:transform .4s}.scroll-cue.is-back svg{transform:rotate(180deg)}.scroll-cue.is-back .scroll-line i{animation-direction:reverse}
 @keyframes scroll-line{0%{transform:translateY(-100%)}70%,100%{transform:translateY(100%)}}
-.enhanced .journey{height:460vh;height:460svh}
+.enhanced .journey{height:340vh;height:340svh}
 .enhanced .viewport{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
 .enhanced .page-section{position:absolute;inset:0;min-height:0;opacity:var(--section-opacity,0);transform:translate3d(0,var(--section-y,0px),0);filter:blur(var(--section-blur,0px));visibility:hidden;will-change:transform,opacity,filter}
 .enhanced .page-section.is-visible{visibility:visible}
